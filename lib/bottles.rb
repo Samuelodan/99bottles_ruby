@@ -49,15 +49,7 @@ class Bottles
   end
 
   def verses(num1, num2)
-    diff = (num1 - num2) + 1
-    result = ''
-    start = num1
-    diff.times do |count|
-      result += verse(start)
-      result += "\n" if (diff - count) > 1
-      start -= 1
-    end
-    result
+    num1.downto(num2).map { |num| verse(num) }.join("\n")
   end
 
   def song
