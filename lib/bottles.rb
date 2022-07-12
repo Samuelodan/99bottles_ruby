@@ -2,17 +2,17 @@
 
 class Bottles
   def verse(num)
-    case num
-    when 0
-      "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
+    "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
       "#{count(num)} #{container(num)} of beer.\n" \
       "#{action(num)}, " \
-      "99 #{container(num - 1)} of beer on the wall.\n"
+      "#{count(successor(num))} #{container(successor(num))} of beer on the wall.\n"
+  end
+
+  def successor(num)
+    if num == 0
+      99
     else
-      "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
-      "#{count(num)} #{container(num)} of beer.\n" \
-      "#{action(num)}, " \
-      "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
+      num - 1
     end
   end
 
