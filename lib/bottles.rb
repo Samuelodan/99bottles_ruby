@@ -13,16 +13,19 @@ class Bottles
       "#{num} bottle of beer.\n" \
       'Take it down and pass it around, ' \
       "no more bottles of beer on the wall.\n"
-    when 2
-      "#{num} bottles of beer on the wall, " \
-      "#{num} bottles of beer.\n" \
-      'Take one down and pass it around, ' \
-      "#{num - 1} bottle of beer on the wall.\n"
     else
       "#{num} bottles of beer on the wall, " \
       "#{num} bottles of beer.\n" \
       'Take one down and pass it around, ' \
-      "#{num - 1} bottles of beer on the wall.\n"
+      "#{num - 1} #{container(num - 1)} of beer on the wall.\n"
+    end
+  end
+
+  def container(num)
+    if num == 1
+      'bottle'
+    else
+      'bottles'
     end
   end
 
