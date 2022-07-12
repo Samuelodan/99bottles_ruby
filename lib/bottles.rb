@@ -8,11 +8,6 @@ class Bottles
       "no more bottles of beer.\n" \
       'Go to the store and buy some more, ' \
       "99 bottles of beer on the wall.\n"
-    when 1
-      "#{count(num)} #{container(num)} of beer on the wall, " \
-      "#{count(num)} #{container(num)} of beer.\n" \
-      "Take #{pronoun(num)} down and pass it around, " \
-      "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
     else
       "#{count(num)} #{container(num)} of beer on the wall, " \
       "#{count(num)} #{container(num)} of beer.\n" \
