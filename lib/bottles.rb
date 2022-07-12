@@ -9,15 +9,15 @@ class Bottles
       'Go to the store and buy some more, ' \
       "99 bottles of beer on the wall.\n"
     when 1
-      "#{num} #{container(num)} of beer on the wall, " \
-      "#{num} #{container(num)} of beer.\n" \
+      "#{count(num)} #{container(num)} of beer on the wall, " \
+      "#{count(num)} #{container(num)} of beer.\n" \
       "Take #{pronoun(num)} down and pass it around, " \
-      "no more bottles of beer on the wall.\n"
+      "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
     else
-      "#{num} #{container(num)} of beer on the wall, " \
-      "#{num} #{container(num)} of beer.\n" \
+      "#{count(num)} #{container(num)} of beer on the wall, " \
+      "#{count(num)} #{container(num)} of beer.\n" \
       "Take #{pronoun(num)} down and pass it around, " \
-      "#{num - 1} #{container(num - 1)} of beer on the wall.\n"
+      "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
     end
   end
 
@@ -34,6 +34,14 @@ class Bottles
       "it"
     else
       "one"
+    end
+  end
+
+  def count(num)
+    if num == 0
+      'no more'
+    else
+      num
     end
   end
 
