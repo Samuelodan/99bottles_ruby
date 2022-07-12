@@ -9,14 +9,14 @@ class Bottles
       'Go to the store and buy some more, ' \
       "99 bottles of beer on the wall.\n"
     when 1
-      "#{num} bottle of beer on the wall, " \
-      "#{num} bottle of beer.\n" \
-      'Take it down and pass it around, ' \
+      "#{num} #{container(num)} of beer on the wall, " \
+      "#{num} #{container(num)} of beer.\n" \
+      "Take #{pronoun(num)} down and pass it around, " \
       "no more bottles of beer on the wall.\n"
     else
-      "#{num} bottles of beer on the wall, " \
-      "#{num} bottles of beer.\n" \
-      'Take one down and pass it around, ' \
+      "#{num} #{container(num)} of beer on the wall, " \
+      "#{num} #{container(num)} of beer.\n" \
+      "Take #{pronoun(num)} down and pass it around, " \
       "#{num - 1} #{container(num - 1)} of beer on the wall.\n"
     end
   end
@@ -26,6 +26,14 @@ class Bottles
       'bottle'
     else
       'bottles'
+    end
+  end
+
+  def pronoun(num)
+    if num == 1
+      "it"
+    else
+      "one"
     end
   end
 
