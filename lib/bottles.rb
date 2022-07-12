@@ -4,12 +4,12 @@ class Bottles
   def verse(num)
     case num
     when 0
-      'No more bottles of beer on the wall, ' \
-      "no more bottles of beer.\n" \
+      "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
+      "no more #{container(num)} of beer.\n" \
       'Go to the store and buy some more, ' \
       "99 bottles of beer on the wall.\n"
     else
-      "#{count(num)} #{container(num)} of beer on the wall, " \
+      "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
       "#{count(num)} #{container(num)} of beer.\n" \
       "Take #{pronoun(num)} down and pass it around, " \
       "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
@@ -36,7 +36,7 @@ class Bottles
     if num == 0
       'no more'
     else
-      num
+      num.to_s
     end
   end
 
