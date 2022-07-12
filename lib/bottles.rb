@@ -5,14 +5,22 @@ class Bottles
     case num
     when 0
       "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
-      "no more #{container(num)} of beer.\n" \
-      'Go to the store and buy some more, ' \
-      "99 bottles of beer on the wall.\n"
+      "#{count(num)} #{container(num)} of beer.\n" \
+      "#{action(num)}, " \
+      "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
     else
       "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
       "#{count(num)} #{container(num)} of beer.\n" \
-      "Take #{pronoun(num)} down and pass it around, " \
+      "#{action(num)}, " \
       "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
+    end
+  end
+
+  def action(num)
+    if num == 0
+      'Go to the store and buy some more'
+    else
+      "Take #{pronoun(num)} down and pass it around"
     end
   end
 
@@ -35,6 +43,8 @@ class Bottles
   def count(num)
     if num == 0
       'no more'
+    elsif num.negative?
+      '99'
     else
       num.to_s
     end
