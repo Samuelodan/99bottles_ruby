@@ -7,7 +7,7 @@ class Bottles
       "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
       "#{count(num)} #{container(num)} of beer.\n" \
       "#{action(num)}, " \
-      "#{count(num - 1)} #{container(num - 1)} of beer on the wall.\n"
+      "99 #{container(num - 1)} of beer on the wall.\n"
     else
       "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
       "#{count(num)} #{container(num)} of beer.\n" \
@@ -43,8 +43,6 @@ class Bottles
   def count(num)
     if num == 0
       'no more'
-    elsif num.negative?
-      '99'
     else
       num.to_s
     end
