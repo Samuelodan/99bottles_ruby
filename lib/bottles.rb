@@ -30,10 +30,6 @@ class Bottles
     BottleNumber.new(num).container
   end
 
-  def pronoun(num)
-    BottleNumber.new(num).pronoun
-  end
-
   def count(num)
     BottleNumber.new(num).count
   end
