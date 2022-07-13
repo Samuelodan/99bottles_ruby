@@ -8,6 +8,14 @@ class Bottles
       "#{count(successor(num))} #{container(successor(num))} of beer on the wall.\n"
   end
 
+  def verses(num1, num2)
+    num1.downto(num2).map { |num| verse(num) }.join("\n")
+  end
+
+  def song
+    verses(99, 0)
+  end
+
   def successor(num)
     BottleNumber.new(num).successor(num)
   end
@@ -26,14 +34,6 @@ class Bottles
 
   def count(num)
     BottleNumber.new(num).count(num)
-  end
-
-  def verses(num1, num2)
-    num1.downto(num2).map { |num| verse(num) }.join("\n")
-  end
-
-  def song
-    verses(99, 0)
   end
 end
 
