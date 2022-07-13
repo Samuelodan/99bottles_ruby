@@ -9,43 +9,23 @@ class Bottles
   end
 
   def successor(num)
-    if num == 0
-      99
-    else
-      num - 1
-    end
+    BottleNumber.new(num).successor(num)
   end
 
   def action(num)
-    if num == 0
-      'Go to the store and buy some more'
-    else
-      "Take #{pronoun(num)} down and pass it around"
-    end
+    BottleNumber.new(num).action(num)
   end
 
   def container(num)
-    if num == 1
-      'bottle'
-    else
-      'bottles'
-    end
+    BottleNumber.new(num).container(num)
   end
 
   def pronoun(num)
-    if num == 1
-      "it"
-    else
-      "one"
-    end
+    BottleNumber.new(num).pronoun(num)
   end
 
   def count(num)
-    if num == 0
-      'no more'
-    else
-      num.to_s
-    end
+    BottleNumber.new(num).count(num)
   end
 
   def verses(num1, num2)
