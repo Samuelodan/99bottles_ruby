@@ -19,22 +19,22 @@ class Bottles
   end
 
   def successor(num)
-    BottleNumber.new(num).successor(num)
+    BottleNumber.new(num).successor
   end
 
   def action(num)
-    BottleNumber.new(num).action(num)
+    BottleNumber.new(num).action
   end
 
   def container(num)
-    BottleNumber.new(num).container(num)
+    BottleNumber.new(num).container
   end
 
   def pronoun(num)
-    BottleNumber.new(num).pronoun(num)
+    BottleNumber.new(num).pronoun
   end
 
   def count(num)
-    BottleNumber.new(num).count(num)
+    BottleNumber.new(num).count
   end
 end

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class BottleNumber
-  attr_reader :number
+  attr_reader :num
 
   def initialize(num)
     @num = num
   end
 
-  def successor(num)
+  def successor
     if num == 0
       99
     else
@@ -15,15 +15,15 @@ class BottleNumber
     end
   end
 
-  def action(num)
+  def action
     if num == 0
       'Go to the store and buy some more'
     else
-      "Take #{pronoun(num)} down and pass it around"
+      "Take #{pronoun} down and pass it around"
     end
   end
 
-  def container(num)
+  def container
     if num == 1
       'bottle'
     else
@@ -31,7 +31,7 @@ class BottleNumber
     end
   end
 
-  def pronoun(num)
+  def pronoun
     if num == 1
       "it"
     else
@@ -39,12 +39,11 @@ class BottleNumber
     end
   end
 
-  def count(num)
+  def count
     if num == 0
       'no more'
     else
       num.to_s
     end
   end
-
 end
