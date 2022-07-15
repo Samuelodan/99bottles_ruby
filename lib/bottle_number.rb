@@ -46,4 +46,8 @@ class BottleNumber
       num.to_s
     end
   end
+
+  def to_s
+    "#{count} #{container}"
+  end
 end

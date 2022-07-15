@@ -7,10 +7,10 @@ class Bottles
     bottle_number = BottleNumber.new(num)
     next_bottle_number = BottleNumber.new(bottle_number.successor)
   
-    "#{bottle_number.count.capitalize} #{bottle_number.container} of beer on the wall, " \
-      "#{bottle_number.count} #{bottle_number.container} of beer.\n" \
+    "#{bottle_number} ".capitalize + "of beer on the wall, " \
+      "#{bottle_number} of beer.\n" \
       "#{bottle_number.action}, " \
-      "#{next_bottle_number.count} #{next_bottle_number.container} of beer on the wall.\n"
+      "#{next_bottle_number} of beer on the wall.\n"
   end
 
   def verses(num1, num2)
