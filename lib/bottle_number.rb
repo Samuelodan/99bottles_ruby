@@ -8,11 +8,7 @@ class BottleNumber
   end
 
   def successor
-    if num == 0
-      99
-    else
       num - 1
-    end
   end
 
   def action
