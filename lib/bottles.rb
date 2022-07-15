@@ -20,20 +20,4 @@ class Bottles
   def song
     verses(99, 0)
   end
-
-  def successor(num)
-    BottleNumber.new(num).successor
-  end
-
-  def action(num)
-    BottleNumber.new(num).action
-  end
-
-  def container(num)
-    BottleNumber.new(num).container
-  end
-
-  def count(num)
-    BottleNumber.new(num).count
-  end
 end
