@@ -37,6 +37,8 @@ class BottleNumber
       BottleNumber0
     when 1
       BottleNumber1
+    when 6
+      BottleNumber6
     else
       BottleNumber
     end.new(num)
