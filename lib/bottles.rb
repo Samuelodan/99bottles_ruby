@@ -4,10 +4,13 @@ require_relative './bottle_number'
 
 class Bottles
   def verse(num)
-    "#{count(num).capitalize} #{container(num)} of beer on the wall, " \
-      "#{count(num)} #{container(num)} of beer.\n" \
-      "#{action(num)}, " \
-      "#{count(successor(num))} #{container(successor(num))} of beer on the wall.\n"
+    bottle_number = BottleNumber.new(num)
+    next_bottle_number = BottleNumber.new(bottle_number.successor)
+  
+    "#{bottle_number.count.capitalize} #{bottle_number.container} of beer on the wall, " \
+      "#{bottle_number.count} #{bottle_number.container} of beer.\n" \
+      "#{bottle_number.action}, " \
+      "#{next_bottle_number.count} #{next_bottle_number.container} of beer on the wall.\n"
   end
 
   def verses(num1, num2)
