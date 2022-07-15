@@ -2,6 +2,7 @@
 
 require_relative './bottle_number'
 require_relative './bottle_number0'
+require_relative './bottle_number1'
 
 class Bottles
   def verse(num)
@@ -26,6 +27,8 @@ class Bottles
     case num
     when 0
       BottleNumber0
+    when 1
+      BottleNumber1
     else
       BottleNumber
     end.new(num)
