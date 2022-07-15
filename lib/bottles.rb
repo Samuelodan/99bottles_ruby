@@ -7,7 +7,7 @@ require_relative './bottle_number1'
 class Bottles
   def verse(num)
     bottle_number = BottleNumber.for(num)
-    next_bottle_number = BottleNumber.for(bottle_number.successor)
+    next_bottle_number = bottle_number.successor
 
     "#{bottle_number} of beer on the wall, ".capitalize +
       "#{bottle_number} of beer.\n" \
