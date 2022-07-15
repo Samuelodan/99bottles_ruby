@@ -8,15 +8,11 @@ class BottleNumber
   end
 
   def successor
-      num - 1
+    num - 1
   end
 
   def action
-    if num == 0
-      'Go to the store and buy some more'
-    else
-      "Take #{pronoun} down and pass it around"
-    end
+    "Take #{pronoun} down and pass it around"
   end
 
   def container
@@ -36,11 +32,7 @@ class BottleNumber
   end
 
   def count
-    if num == 0
-      'no more'
-    else
-      num.to_s
-    end
+    num.to_s
   end
 
   def to_s
