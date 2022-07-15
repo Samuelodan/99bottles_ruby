@@ -16,19 +16,11 @@ class BottleNumber
   end
 
   def container
-    if num == 1
-      'bottle'
-    else
-      'bottles'
-    end
+    'bottles'
   end
 
   def pronoun
-    if num == 1
-      "it"
-    else
-      "one"
-    end
+    "one"
   end
 
   def count
