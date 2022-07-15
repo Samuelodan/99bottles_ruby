@@ -8,7 +8,7 @@ class BottleNumber
   end
 
   def successor
-    num - 1
+    BottleNumber.for(num - 1)
   end
 
   def action
