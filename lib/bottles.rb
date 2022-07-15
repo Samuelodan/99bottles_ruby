@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 require_relative './bottle_number'
+require_relative './bottle_number0'
 
 
 class Bottles
   def verse(num)
-    bottle_number = BottleNumber.new(num)
-    next_bottle_number = BottleNumber.new(bottle_number.successor)
+    bottle_number = bottle_number_for(num)
+    next_bottle_number = bottle_number_for(bottle_number.successor)
   
     "#{bottle_number} of beer on the wall, ".capitalize +
     "#{bottle_number} of beer.\n" \
@@ -19,5 +20,13 @@ class Bottles
 
   def song
     verses(99, 0)
+  end
+
+  def bottle_number_for(num)
+    if num == 0
+      BottleNumber0
+    else
+      BottleNumber
+    end.new(num)
   end
 end
