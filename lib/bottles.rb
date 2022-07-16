@@ -4,16 +4,11 @@ require_relative './bottle_number'
 require_relative './bottle_number0'
 require_relative './bottle_number1'
 require_relative './bottle_number6'
+require_relative './bottle_verse'
 
 class Bottles
   def verse(num)
-    bottle_number = BottleNumber.for(num)
-    next_bottle_number = bottle_number.successor
-
-    "#{bottle_number} of beer on the wall, ".capitalize +
-      "#{bottle_number} of beer.\n" \
-      "#{bottle_number.action}, " \
-      "#{next_bottle_number} of beer on the wall.\n"
+    BottleVerse.new(num).verse(num)
   end
 
   def verses(num1, num2)
