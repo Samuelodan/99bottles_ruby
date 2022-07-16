@@ -55,4 +55,6 @@ class BottleNumber
   def self.register(candidate)
     registry.prepend(candidate)
   end
+
+  BottleNumber.register(self)
 end
