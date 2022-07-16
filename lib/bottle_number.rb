@@ -32,16 +32,7 @@ class BottleNumber
   end
 
   def self.for(num)
-    case num
-    when 0
-      BottleNumber0
-    when 1
-      BottleNumber1
-    when 6
-      BottleNumber6
-    else
-      BottleNumber
-    end.new(num)
+    registry.find { |candidate| candidate.handles?(num) }.new(num)
   end
 
   def self.handles?(num)
