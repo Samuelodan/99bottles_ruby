@@ -43,4 +43,8 @@ class BottleNumber
       BottleNumber
     end.new(num)
   end
+
+  def self.handle?(num)
+    true
+  end
 end
