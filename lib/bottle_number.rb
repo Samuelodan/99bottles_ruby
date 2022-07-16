@@ -39,8 +39,12 @@ class BottleNumber
     true
   end
 
+  def self.inherited(candidate)
+    register(candidate)
+  end
+
   def self.registry
-    @registry ||= []
+    @registry ||= [BottleNumber]
   end
 
   def self.register(candidate)
