@@ -14,4 +14,6 @@ class BottleNumber1 < BottleNumber
   def self.handle?(num)
     num == 1
   end
+
+  BottleNumber.register(self)
 end
