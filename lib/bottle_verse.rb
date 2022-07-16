@@ -7,7 +7,7 @@ class BottleVerse
     @num = num
   end
 
-  def verse(num)
+  def lyrics
     bottle_number = BottleNumber.for(num)
     next_bottle_number = bottle_number.successor
 

@@ -8,7 +8,7 @@ require_relative './bottle_verse'
 
 class Bottles
   def verse(num)
-    BottleVerse.new(num).verse(num)
+    BottleVerse.new(num).lyrics
   end
 
   def verses(num1, num2)
