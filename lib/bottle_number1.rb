@@ -10,4 +10,8 @@ class BottleNumber1 < BottleNumber
   def pronoun
     "it"
   end
+
+  def self.handle?(num)
+    num == 1
+  end
 end

@@ -13,4 +13,8 @@ class BottleNumber0 < BottleNumber
   def count
     'no more'
   end
+
+  def self.handle?(num)
+    num == 0
+  end
 end

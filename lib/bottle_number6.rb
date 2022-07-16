@@ -9,4 +9,8 @@ class BottleNumber6 < BottleNumber
   def count
     '1'
   end
+
+  def self.handle?(num)
+    num == 6
+  end
 end
