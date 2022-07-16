@@ -10,7 +10,7 @@ class BottleNumber6 < BottleNumber
     '1'
   end
 
-  def self.handle?(num)
+  def self.handles?(num)
     num == 6
   end
 

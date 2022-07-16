@@ -11,7 +11,7 @@ class BottleNumber1 < BottleNumber
     "it"
   end
 
-  def self.handle?(num)
+  def self.handles?(num)
     num == 1
   end
 
