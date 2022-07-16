@@ -53,6 +53,6 @@ class BottleNumber
   end
 
   def self.register(candidate)
-    @registry.prepend(candidate)
+    registry.prepend(candidate)
   end
 end
