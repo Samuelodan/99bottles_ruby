@@ -7,8 +7,14 @@ require_relative './bottle_number6'
 require_relative './bottle_verse'
 
 class Bottles
+  attr_reader :verse_template
+
+  def initialize(verse_template: BottleVerse)
+    @verse_template = verse_template
+  end
+
   def verse(num)
-    BottleVerse.new(num).lyrics
+    verse_template.new(num).lyrics
   end
 
   def verses(num1, num2)
