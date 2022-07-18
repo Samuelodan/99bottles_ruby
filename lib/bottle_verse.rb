@@ -15,4 +15,8 @@ class BottleVerse
       "#{bottle_number.action}, " \
       "#{bottle_number.successor} of beer on the wall.\n"
   end
+
+  def self.lyrics(num)
+    new(num).lyrics
+  end
 end

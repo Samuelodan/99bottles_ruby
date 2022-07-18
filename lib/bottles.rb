@@ -14,7 +14,7 @@ class Bottles
   end
 
   def verse(num)
-    verse_template.new(num).lyrics
+    verse_template.lyrics(num)
   end
 
   def verses(num1, num2)
