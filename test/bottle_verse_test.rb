@@ -4,7 +4,7 @@ require 'minitest/pride'
 require_relative '../lib/bottle_verse'
 
 class BottleVerseTest < Minitest::Test
-  def test_the_first_verse
+  def test_verse_general_rule_upper_bound
     expected =
       "99 bottles of beer on the wall, " +
       "99 bottles of beer.\n" +
@@ -13,7 +13,7 @@ class BottleVerseTest < Minitest::Test
     assert_equal expected, BottleVerse.lyrics(99)
   end
 
-  def test_another_verse
+  def test_verse_general_rule_lower_bound
     expected =
       "3 bottles of beer on the wall, " +
       "3 bottles of beer.\n" +
