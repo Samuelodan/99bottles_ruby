@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require_relative './bottle_number'
-require_relative './bottle_number0'
-require_relative './bottle_number1'
-require_relative './bottle_number6'
 require_relative './bottle_verse'
 
 class CountdownSong
