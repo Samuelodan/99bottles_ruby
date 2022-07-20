@@ -22,7 +22,7 @@ class CountdownSongTest < Minitest::Test
     CountdownSong.new(verse_template: VerseFake).verses(99, 97)
   end
 
-  def test_the_whole_song
+  def test_song
     expected = 
       "This is verse 47.\n" +
       "\n" +
