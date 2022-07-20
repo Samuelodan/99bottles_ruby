@@ -20,6 +20,6 @@ class CountdownSong
   end
 
   def song
-    verses(99, 0)
+    verses(max, min)
   end
 end
