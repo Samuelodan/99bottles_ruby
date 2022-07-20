@@ -6,7 +6,7 @@ require_relative '../lib/verse_fake'
 
 class CountdownSongTest < Minitest::Test
   def test_verse
-    expected = 
+    expected =
       "This is verse 500.\n"
     assert_equal expected, CountdownSong.new(verse_template: VerseFake).verse(500)
   end
@@ -18,7 +18,8 @@ class CountdownSongTest < Minitest::Test
       "This is verse 98.\n" +
       "\n" +
       "This is verse 97.\n"
-    assert_equal expected, CountdownSong.new(verse_template: VerseFake).verses(99, 97)
+    assert_equal expected,
+    CountdownSong.new(verse_template: VerseFake).verses(99, 97)
   end
 
   def test_the_whole_song
