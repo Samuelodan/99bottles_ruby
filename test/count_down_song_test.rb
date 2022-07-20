@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.4'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/bottles'
+require_relative '../lib/count_down_song'
 
 class CountdownSongTest < Minitest::Test
   def test_a_couple_verses
