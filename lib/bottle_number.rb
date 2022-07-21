@@ -35,7 +35,7 @@ class BottleNumber
     registry.find { |candidate| candidate.handles?(num) }.new(num)
   end
 
-  def self.handles?(num)
+  def self.handles?(_num)
     true
   end
 
