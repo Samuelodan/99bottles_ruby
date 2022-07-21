@@ -1,4 +1,4 @@
-#frozen_string_literal: true
+# frozen_string_literal: true
 
 require_relative './bottle_number'
 
@@ -8,7 +8,7 @@ class BottleNumber1 < BottleNumber
   end
 
   def pronoun
-    "it"
+    'it'
   end
 
   def self.handles?(num)
