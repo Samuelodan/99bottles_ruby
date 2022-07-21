@@ -20,7 +20,7 @@ class BottleNumber
   end
 
   def pronoun
-    "one"
+    'one'
   end
 
   def count
