@@ -1,4 +1,5 @@
-# frozem_string_literal: true
+# frozen_string_literal: true
+
 require_relative './bottle_number'
 
 class BottleNumber0 < BottleNumber
@@ -15,6 +16,6 @@ class BottleNumber0 < BottleNumber
   end
 
   def self.handles?(num)
-    num == 0
+    num.zero?
   end
 end
